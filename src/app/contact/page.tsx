@@ -23,6 +23,8 @@ type ContactForm = z.infer<typeof contactSchema>;
 
 const engagementTypes = [
   "Smart Contract Audit",
+  "AI Security",
+  "AI Security × Web3",
   "Red Team",
   "Infrastructure Review",
   "Security Architecture Review",
