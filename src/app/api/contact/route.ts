@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
 
     await resend.emails.send({
-      from: "Viper Contact Form <noreply@viper-offsec.com>",
+      from: process.env.RESEND_FROM_EMAIL || "Viper Contact Form <onboarding@resend.dev>",
       to: "info@viper-offsec.com",
       subject: `New Inquiry: ${engagementType} — ${company}`,
       text: [
