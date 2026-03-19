@@ -20,7 +20,7 @@ const credentials = [
     icon: Globe,
     text: "Web3 clients: L1/L2 chains, DeFi protocols, cross-chain bridges, wallets",
   },
-  { icon: FileCheck, text: "Registered: England & Estonia" },
+  { icon: FileCheck, text: "Registered: the UK & Netherlands" },
 ];
 
 export default function AboutPage() {

@@ -95,7 +95,7 @@ export function Footer() {
           <p className="text-xs text-viper-gray">
             &copy; {new Date().getFullYear()} Viper Offensive Security Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-viper-gray">Registered in England &amp; Estonia</p>
+          <p className="text-xs text-viper-gray">Registered in the UK &amp; Netherlands</p>
         </div>
       </div>
     </footer>
