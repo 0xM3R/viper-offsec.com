@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MobileMenu } from "./mobile-menu";
+import ViperLogo from "@/components/common/ViperLogo";
 
 const navLinks = [
   { href: "/services#ai-security", label: "AI Security" },
@@ -48,13 +49,8 @@ export function Navbar() {
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-viper-green font-mono text-lg font-bold tracking-tight">
-                VIPER
-              </span>
-              <span className="hidden sm:inline text-viper-gray text-sm font-mono">
-                offsec
-              </span>
+            <Link href="/" aria-label="Viper Offensive Security — Home">
+              <ViperLogo size="sm" />
             </Link>
 
             <div className="hidden md:flex items-center gap-8">

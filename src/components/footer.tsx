@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ViperLogo from "@/components/common/ViperLogo";
 
 const footerColumns = [
   {
@@ -38,8 +39,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="text-viper-green font-mono text-lg font-bold">
-              VIPER<span className="text-viper-gray ml-1 text-sm">offsec</span>
+            <Link href="/" aria-label="Viper Offensive Security">
+              <ViperLogo size="sm" showTagline={false} />
             </Link>
             <p className="mt-3 text-sm text-viper-gray max-w-xs">
               Hands-on offensive security — Web3-native, web2-capable.
