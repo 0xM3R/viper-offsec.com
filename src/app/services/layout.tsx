@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web3 & AI Security Services",
+  title: "Security Services | Penetration Testing, Red Team & Web3 Audits",
   description:
-    "Smart contract audits, LLM red teaming, AI agent security, and blockchain infrastructure hardening. Offensive security research for Web3 and AI systems.",
+    "Offensive security services: smart contract audits, penetration testing, red team operations, AI security, and vulnerability research. Web3-native. Web2-capable. Hands-on engineer, not a checkbox report.",
   keywords: [
     "AI security audit",
     "LLM penetration testing",
@@ -15,11 +15,14 @@ export const metadata: Metadata = {
     "on-chain AI agent audit",
     "MCP security review",
     "DeFi AI security",
+    "penetration testing",
+    "web application security",
+    "red team operations",
   ],
   openGraph: {
-    title: "Web3 & AI Security Services | Viper Offensive Security",
+    title: "Security Services | Viper Offensive Security",
     description:
-      "Smart contract audits, LLM red teaming, AI agent security, and blockchain infrastructure hardening. Offensive security research for Web3 and AI systems.",
+      "Offensive security services: smart contract audits, penetration testing, red team operations, AI security, and vulnerability research.",
   },
 };
 
@@ -27,8 +30,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://viper-offsec.com" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://viper-offsec.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.viper-offsec.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.viper-offsec.com/services" },
   ],
 };
 
@@ -47,9 +50,12 @@ const serviceSchema = {
     "AI Agent Security",
     "AI-Augmented Smart Contract Audits",
     "Web3 AI Infrastructure Security",
+    "Web Application Penetration Testing",
+    "Network Penetration Testing",
+    "Mobile Application Security",
   ],
   areaServed: "Worldwide",
-  description: "Comprehensive offensive security services for the Web3 and AI ecosystems.",
+  description: "Hands-on offensive security services across Web3 and Web2.",
 };
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {

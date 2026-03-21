@@ -18,7 +18,7 @@ export const timelineEntries: TimelineEntry[] = [
     title: "Founder & Principal Consultant",
     organization: "Viper Offensive Security Ltd",
     description:
-      "Founded boutique Web3 security consultancy. Delivering smart contract audits, red team operations, and blockchain infrastructure security for protocols including Rootstock, ZetaChain, IFT, and BitMEX.",
+      "Founded hands-on offensive security practice. Delivering smart contract audits, penetration testing, red team operations, and blockchain infrastructure security for protocols including Rootstock, ZetaChain, IFT, and BitMEX.",
   },
   {
     year: "2019–2022",

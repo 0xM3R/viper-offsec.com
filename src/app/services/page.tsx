@@ -5,6 +5,51 @@ import { services } from "@/data/services";
 import { FadeIn } from "@/components/fade-in";
 import { cn } from "@/lib/utils";
 
+const web2Services = [
+  {
+    title: "Web Application & API Penetration Testing",
+    description:
+      "Manual penetration testing of web applications, REST/GraphQL APIs, and authentication flows. No scanner-first methodology \u2014 we test like an attacker with time and motivation.",
+    tags: ["OWASP Top 10", "API Security", "Auth Bypass", "IDOR", "SQLi", "Manual Testing"],
+    engagements: [
+      "Web application penetration test",
+      "REST & GraphQL API security assessment",
+      "Authentication & authorization testing",
+      "Business logic vulnerability analysis",
+      "Session management review",
+      "File upload & injection testing",
+    ],
+  },
+  {
+    title: "Network & Infrastructure Penetration Testing",
+    description:
+      "External and internal network penetration tests. From external perimeter enumeration through to domain compromise. Relevant for Web3 companies with traditional corporate infrastructure.",
+    tags: ["External Perimeter", "Internal Network", "Active Directory", "Lateral Movement", "VPN"],
+    engagements: [
+      "External perimeter penetration test",
+      "Internal network penetration test",
+      "Active Directory attack path analysis",
+      "VPN & remote access security review",
+      "Cloud infrastructure assessment",
+      "Wireless network security testing",
+    ],
+  },
+  {
+    title: "Mobile Application Security",
+    description:
+      "Mobile application security assessments for iOS and Android. Particularly relevant for Web3 wallet apps and DeFi mobile clients where private key handling and biometric bypass are critical vectors.",
+    tags: ["iOS", "Android", "API Interception", "Binary Analysis", "Runtime Manipulation"],
+    engagements: [
+      "iOS application security assessment",
+      "Android application security assessment",
+      "API traffic interception & manipulation",
+      "Binary reverse engineering",
+      "Runtime tampering & hooking",
+      "Secure storage & key handling review",
+    ],
+  },
+];
+
 const aiServices = [
   {
     title: "LLM & AI System Security",
@@ -67,7 +112,7 @@ const aiServices = [
 export default function ServicesPage() {
   const [activeSection, setActiveSection] = useState(services[0].id);
 
-  const allSections = [...services.map((s) => s.id), "ai-security"];
+  const allSections = [...services.map((s) => s.id), "ai-security", "web2-security"];
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -90,6 +135,7 @@ export default function ServicesPage() {
     });
 
     return () => observers.forEach((o) => o.disconnect());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -134,6 +180,17 @@ export default function ServicesPage() {
             >
               AI Security
             </a>
+            <a
+              href="#web2-security"
+              className={cn(
+                "text-sm font-medium transition-colors whitespace-nowrap",
+                activeSection === "web2-security"
+                  ? "text-emerald-400"
+                  : "text-viper-gray hover:text-foreground"
+              )}
+            >
+              Web2 Pentesting
+            </a>
           </nav>
         </div>
 
@@ -163,6 +220,17 @@ export default function ServicesPage() {
               )}
             >
               AI Security
+            </a>
+            <a
+              href="#web2-security"
+              className={cn(
+                "text-xs font-medium px-3 py-1.5 rounded-full border transition-all whitespace-nowrap",
+                activeSection === "web2-security"
+                  ? "border-emerald-400 text-emerald-400 bg-emerald-500/10"
+                  : "border-viper-dark-border text-viper-gray hover:text-foreground"
+              )}
+            >
+              Web2 Pentesting
             </a>
           </nav>
         </div>
@@ -274,6 +342,47 @@ export default function ServicesPage() {
                     {svc.engagements.map((e) => (
                       <li key={e} className="text-sm text-zinc-500 flex items-center gap-2">
                         <span className="h-1 w-1 rounded-full bg-violet-400 shrink-0" />
+                        {e}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+
+        <div id="web2-security" className="pt-16 scroll-mt-24">
+          <FadeIn>
+            <p className="font-mono text-xs tracking-widest text-zinc-500 uppercase mb-2">
+              {"// web2 & full-spectrum"}
+            </p>
+            <h2 className="text-2xl font-semibold tracking-tight mb-10">
+              Beyond the Blockchain
+            </h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {web2Services.map((svc, i) => (
+              <FadeIn key={svc.title} delay={i * 0.07}>
+                <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6 transition-all duration-300 hover:border-emerald-500/30">
+                  <h3 className="text-lg font-semibold text-foreground mb-3">{svc.title}</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed mb-4">{svc.description}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {svc.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-mono text-[10px] px-2 py-0.5 rounded border border-emerald-500/30 text-emerald-400 bg-emerald-500/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h4 className="text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2">Engagement Types</h4>
+                  <ul className="space-y-1">
+                    {svc.engagements.map((e) => (
+                      <li key={e} className="text-sm text-zinc-500 flex items-center gap-2">
+                        <span className="h-1 w-1 rounded-full bg-emerald-400 shrink-0" />
                         {e}
                       </li>
                     ))}

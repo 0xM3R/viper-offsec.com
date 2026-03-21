@@ -11,6 +11,7 @@ const footerColumns = [
       { href: "/services#vulnerability-research", label: "Vulnerability Research" },
       { href: "/services#vciso", label: "vCISO / Advisory" },
       { href: "/services#ai-security", label: "AI Security" },
+      { href: "/services#web2-security", label: "Web2 Pentesting" },
     ],
   },
   {
@@ -41,8 +42,9 @@ export function Footer() {
               VIPER<span className="text-viper-gray ml-1 text-sm">offsec</span>
             </Link>
             <p className="mt-3 text-sm text-viper-gray max-w-xs">
-              Boutique Web3 security consultancy. Smart contract audits, red team operations, and
-              blockchain infrastructure security.
+              Hands-on offensive security — Web3-native, web2-capable.
+              Smart contract audits, penetration testing, red team,
+              and AI security.
             </p>
           </div>
 

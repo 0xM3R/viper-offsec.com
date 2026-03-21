@@ -4,9 +4,9 @@ import { Section } from "@/components/section";
 import { FadeIn } from "@/components/fade-in";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About | Offensive Security Engineer, DEF CON Speaker",
   description:
-    "Viper Offensive Security is a boutique Web3 security consultancy specializing in smart contract audits, red team operations, and blockchain infrastructure security. Every engagement is led by a senior researcher.",
+    "15+ years hands-on offensive security. DEF CON and Infiltrate speaker. Former NFI, Bird, KPN. Web3 security specialist and penetration tester. Based in the Netherlands.",
 };
 
 const credentials = [
@@ -39,12 +39,14 @@ export default function AboutPage() {
           <FadeIn>
             <div className="space-y-6 text-lg text-viper-gray-light leading-relaxed">
               <p>
-                Viper Offensive Security is a boutique security consultancy specializing in
-                Web3, blockchain infrastructure, and offensive security. We work with a small
-                number of clients at a time&nbsp;&mdash; by design.
+                Viper Offensive Security is run by a hands-on offensive security
+                engineer with over 15 years of practical attack experience&nbsp;&mdash;
+                across embedded systems, Web3 protocols, enterprise networks,
+                and AI systems.
               </p>
               <p>
-                Every engagement is led by a senior researcher, not handed off to a junior
+                We work with a small number of clients at a time&nbsp;&mdash; by design.
+                Every engagement is led by a senior engineer, not handed off to a junior
                 team. No account managers, no revolving door of analysts. When you hire Viper,
                 you get the person who actually does the work.
               </p>

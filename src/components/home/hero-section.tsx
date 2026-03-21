@@ -19,8 +19,8 @@ export function HeroSection() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1]">
-                Web3 Security That{" "}
-                <span className="text-emerald-400">Goes Deeper.</span>
+                Offensive Security.{" "}
+                <span className="text-emerald-400">Web3-Native.</span>
               </h1>
             </motion.div>
 
@@ -30,8 +30,9 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-6 text-lg text-zinc-400 leading-relaxed max-w-xl"
             >
-              Smart contract audits, red team operations, and blockchain infrastructure
-              security&nbsp;&mdash; for protocols that ship without compromise.
+              Smart contract audits, penetration testing, red team operations,
+              and vulnerability research&nbsp;&mdash; for Web3 protocols and Web2 teams
+              that need a hands-on attacker, not a checkbox report.
             </motion.p>
 
             <motion.div
@@ -61,7 +62,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="font-mono text-xs text-zinc-600 mt-4"
             >
-              {"// "}Presented at DEF CON &middot; Infiltrate &middot; 15 years offensive security
+              {"// "}DEF CON &middot; Infiltrate &middot; 15 yrs offensive security &middot; Web3 + Web2
             </motion.p>
           </div>
 

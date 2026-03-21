@@ -66,7 +66,10 @@ export function ServicesSnapshot() {
           What We Do
         </h2>
         <p className="text-lg text-zinc-500 max-w-2xl mb-12">
-          Deep offensive security expertise applied to the Web3 ecosystem.
+          Hands-on offensive security across Web3 and Web2.
+          No automated scan reports. No junior consultants.
+          Every engagement is led by a senior engineer with 15 years
+          of real-world attack experience.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviceCards.map((card, i) => (
