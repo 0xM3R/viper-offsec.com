@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { Shield, Mic, Building, Globe, FileCheck } from "lucide-react";
 import { Section } from "@/components/section";
 import { FadeIn } from "@/components/fade-in";
 
@@ -10,17 +9,13 @@ export const metadata: Metadata = {
 };
 
 const credentials = [
-  { icon: Shield, text: "15+ years offensive security experience" },
-  { icon: Mic, text: "Presented at DEF CON and Infiltrate" },
-  {
-    icon: Building,
-    text: "Former: Netherlands Forensic Institute, European unicorn security lead, national telecom security",
-  },
-  {
-    icon: Globe,
-    text: "Web3 clients: L1/L2 chains, DeFi protocols, cross-chain bridges, wallets",
-  },
-  { icon: FileCheck, text: "Registered: the UK & Netherlands" },
+  "15+ years offensive security \u2014 embedded systems, Web3 protocol cores, enterprise networks, AI systems",
+  "Presented at DEF CON and Infiltrate",
+  "Former: Netherlands Forensic Institute, European unicorn security lead (Bird), national telecom security (KPN)",
+  "Audited L1/L2 cores: ZetaChain (Cosmos SDK, Evmos, IBC), RootStock (RSKj VM, two-way peg), Linea L2 bridge (ZK-SNARK circuits, proof aggregation), TON, Solana, and Sui consensus and state transition logic",
+  "Cryptographic primitive audits: Noise protocol, ephemeral key exchange, ratcheting \u2014 for Codex, Waku, Nomos, and Status Wallet (Rust, Nim, JS)",
+  "Custom tooling: Slither detectors, Echidna, Medusa, Halmos, Certora \u2014 across EVM, Rust, and Cairo",
+  "Registered: England & Wales \u00B7 Operating from the Netherlands",
 ];
 
 export default function AboutPage() {
@@ -60,12 +55,12 @@ export default function AboutPage() {
           <FadeIn>
             <h2 className="text-2xl font-bold text-foreground mb-8">Credentials</h2>
           </FadeIn>
-          <ul className="space-y-5">
+          <ul className="space-y-3 text-zinc-400 text-sm">
             {credentials.map((cred, i) => (
-              <FadeIn key={i} delay={i * 0.08}>
-                <li className="flex items-start gap-4">
-                  <cred.icon className="h-5 w-5 text-viper-green mt-0.5 shrink-0" />
-                  <span className="text-foreground">{cred.text}</span>
+              <FadeIn key={i} delay={i * 0.06}>
+                <li className="flex gap-3">
+                  <span className="text-emerald-400 font-mono mt-0.5">&rarr;</span>
+                  <span>{cred}</span>
                 </li>
               </FadeIn>
             ))}

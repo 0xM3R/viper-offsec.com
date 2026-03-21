@@ -35,6 +35,26 @@ const sessions = [
 [INFO]      Model fingerprinting possible via timing oracle
 
 6 findings. Report: ./reports/ai-agent-audit.pdf`,
+
+  `$ viper audit --target ./bridge/LineaBridge.sol --mode zk-l2
+[CRITICAL]  Proof aggregation middleware bypass → circuit line 34
+[CRITICAL]  Rollup exit verification missing state root check
+[HIGH]      ZK-SNARK hash function not circuit-friendly → line 89
+[HIGH]      Operator liveness constraint not enforced on-chain
+[MEDIUM]    Fraud-proof state root window too short → 12 blocks
+[INFO]      Circuit isolation gap between inner/outer provers
+
+6 findings. Report: ./reports/l2-bridge-audit.pdf`,
+
+  `$ viper audit --target ./zetachain/x/crosschain --chain cosmos
+[CRITICAL]  IBC light-client relay logic — fork not detected
+[CRITICAL]  Cross-chain token port — replay attack vector
+[HIGH]      Evmos execution layer — state transition edge case
+[HIGH]      IBC routing — message ordering not enforced
+[MEDIUM]    Cosmos SDK module — governance param overflow
+[INFO]      Light client — bisection game timeout too short
+
+6 findings. Report: ./reports/zetachain-core-audit.pdf`,
 ];
 
 function getLineColor(line: string): string {

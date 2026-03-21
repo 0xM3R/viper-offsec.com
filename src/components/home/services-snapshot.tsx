@@ -9,7 +9,7 @@ const serviceCards = [
     icon: Shield,
     title: "Smart Contract Audit",
     description:
-      "EVM (Solidity/Vyper), Rust, Cairo. Manual + automated analysis across all major chains.",
+      "EVM (Solidity/Vyper), Rust, Cairo, Nim, and Move. From DeFi protocol logic to L1/L2 VM internals, ZK circuits, and cross-chain bridge verification.",
     tags: ["Manual Review", "Custom Tools", "Aderyn", "Echidna", "Medusa", "Halmos"],
     href: "/services#smart-contract-audit",
   },
@@ -66,10 +66,11 @@ export function ServicesSnapshot() {
           What We Do
         </h2>
         <p className="text-lg text-zinc-500 max-w-2xl mb-12">
-          Hands-on offensive security across Web3 and Web2.
-          No automated scan reports. No junior consultants.
-          Every engagement is led by a senior engineer with 15 years
-          of real-world attack experience.
+          Hands-on offensive security from smart contract logic to
+          L1 consensus engines. No automated scan reports. No junior
+          consultants. Every engagement is led by a senior engineer
+          who has audited the protocols, VMs, and cryptographic
+          primitives your stack depends on.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviceCards.map((card, i) => (

@@ -17,19 +17,22 @@ export const services: Service[] = [
     title: "Smart Contract Audit",
     icon: Shield,
     shortDescription:
-      "EVM (Solidity/Vyper), Rust, Cairo. Manual + automated analysis across all major chains.",
+      "EVM (Solidity/Vyper), Rust, Cairo, Nim, and Move. From DeFi protocol logic to L1/L2 VM internals, ZK circuits, and cross-chain bridge verification.",
     description: [
       "Manual security review of smart contracts across EVM and non-EVM chains. Our methodology covers the full spectrum of smart contract vulnerabilities: reentrancy, access control flaws, flash loan attack vectors, oracle manipulation, upgrade proxy risks, integer over/underflow, and critical business logic flaws.",
       "We combine manual expert review with state-of-the-art automated tooling to achieve coverage that neither approach achieves alone. Every finding includes severity ratings, proof-of-concept exploits where applicable, and actionable remediation guidance.",
+      "Our audits go beyond application-layer contracts. We have reviewed RSKj virtual machine internals and trie structures, Evmos execution layer logic, IBC cross-chain routing and light-client relay logic, ZK-SNARK circuit isolation and proof aggregation middleware, Noise protocol handshake implementations, ephemeral key exchange, and ratcheting behaviors in distributed messaging systems \u2014 all at the source code and protocol specification level.",
     ],
     tags: ["Manual Review", "Custom Tools", "Aderyn", "Echidna", "Medusa", "Halmos"],
     tools: [
-      "Custom Viper tooling (static analysis)",
+      "Custom Viper Slither detectors (static analysis)",
       "Aderyn (static analysis)",
       "Echidna (property-based fuzzing)",
       "Medusa (property-based fuzzing)",
       "Halmos (symbolic execution)",
       "Certora Prover (formal verification)",
+      "Manual cryptographic primitive review",
+      "ZK circuit analysis and trace inspection",
     ],
     deliverables: [
       "Detailed audit report with severity ratings (Critical / High / Medium / Low / Informational)",
@@ -64,13 +67,17 @@ export const services: Service[] = [
       "Nodes, RPC, key management, validator security, threat modeling for protocol backends.",
     description: [
       "Security assessment of the non-contract layer: node infrastructure hardening, RPC endpoint security, key management architecture (HSMs, MPC), validator security, monitoring & alerting setup, and threat modeling for protocol backends.",
-      "Smart contracts don't exist in a vacuum. The infrastructure running your chain, validators, and backend services is equally critical. We assess the full stack — from cloud configuration to key ceremony processes.",
+      "Smart contracts don't exist in a vacuum. The infrastructure running your chain, validators, and backend services is equally critical. We assess the full stack \u2014 from cloud configuration to key ceremony processes.",
+      "Previous engagements have included federated HSM-based signing infrastructure at RSK/RootStock, two-way peg bridge security, gas-cost inflation vector analysis, validator infrastructure at ZetaChain, and consensus fault detection on Solana, TON, and Sui core implementations.",
     ],
     tags: ["Node Hardening", "Key Management", "Threat Modeling", "HSM/MPC"],
     tools: [
       "Custom infrastructure scanning tools",
       "Cloud security assessment frameworks",
       "Network analysis tools",
+      "Federated HSM security assessment",
+      "Consensus fault analysis",
+      "VM internals review (RSKj, EVM, SVM, TVM)",
     ],
     deliverables: [
       "Infrastructure security assessment report",

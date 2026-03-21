@@ -114,6 +114,27 @@ const chains = [
       </svg>
     ),
   },
+  {
+    name: "TON",
+    color: "#0088CC",
+    tag: "L1",
+    logo: (
+      <svg viewBox="0 0 100 100" className="w-[38px] h-[38px]">
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#0088CC" strokeWidth="3" />
+        <polygon points="50,22 62,44 50,78 38,44" fill="#0088CC" />
+      </svg>
+    ),
+  },
+  {
+    name: "Sui",
+    color: "#4CA3FF",
+    tag: "Move VM",
+    logo: (
+      <svg viewBox="0 0 100 100" className="w-[38px] h-[38px]">
+        <path d="M50,18 Q72,35 65,55 Q58,75 50,82 Q42,75 35,55 Q28,35 50,18Z" fill="#4CA3FF" />
+      </svg>
+    ),
+  },
 ];
 
 export function ChainBar() {
@@ -123,7 +144,7 @@ export function ChainBar() {
         <p className="font-mono text-xs tracking-widest text-zinc-500 uppercase mb-8">
           {"// chains audited"}
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
           {chains.map((chain) => (
             <div
               key={chain.name}

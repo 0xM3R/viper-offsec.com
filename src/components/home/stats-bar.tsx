@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 const stats = [
   { value: "15+", label: "years offensive security" },
   { value: "3", label: "DEF CON & Infiltrate talks" },
-  { value: "10", label: "chains audited" },
+  { value: "5", label: "L1/L2 cores audited" },
+  { value: "12+", label: "chains audited" },
   { value: "0", label: "undisclosed critical findings" },
 ];
 
@@ -47,7 +48,7 @@ export function StatsBar() {
   return (
     <section className="bg-zinc-950 border-y border-zinc-800 py-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-5">
           {stats.map((stat, i) => (
             <div
               key={stat.label}

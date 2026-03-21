@@ -30,9 +30,10 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-6 text-lg text-zinc-400 leading-relaxed max-w-xl"
             >
-              Smart contract audits, penetration testing, red team operations,
-              and vulnerability research&nbsp;&mdash; for Web3 protocols and Web2 teams
-              that need a hands-on attacker, not a checkbox report.
+              Smart contract audits from application layer to VM internals.
+              Penetration testing, red team operations, and cryptographic
+              primitive review&nbsp;&mdash; for teams building at the edge of what
+              has been secured before.
             </motion.p>
 
             <motion.div

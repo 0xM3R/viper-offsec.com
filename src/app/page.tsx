@@ -153,6 +153,97 @@ function Web2Section() {
   );
 }
 
+const techDepthCards = [
+  {
+    label: "// ZK & L2 infrastructure",
+    title: "ZK-SNARK Circuits & L2 Bridge Verification",
+    description:
+      "Reviewed Linea\u2019s L2 bridge for IFT \u2014 covering ZK-SNARK-friendly hash functions, circuit isolation, proof aggregation middleware, rollup-to-mainnet exit verification, fraud-proof state roots, and operator liveness constraints.",
+    tags: ["ZK-SNARKs", "Circuit Isolation", "Proof Aggregation", "Rollup Exit", "Fraud Proofs"],
+  },
+  {
+    label: "// cross-chain & cosmos",
+    title: "IBC Routing, Cosmos SDK & Evmos Execution Layer",
+    description:
+      "Audited Cosmos SDK modules, Evmos execution layer, IBC cross-chain routing, token port modules, and light-client relay logic at ZetaChain. Consensus fault detection and state transition analysis on TON, Solana, and Sui core implementations.",
+    tags: ["Cosmos SDK", "IBC Routing", "Light Client", "Evmos", "State Transitions"],
+  },
+  {
+    label: "// VM internals & bridges",
+    title: "RSKj VM, Trie Structures & Two-Way Peg Security",
+    description:
+      "DeFi protocols and L1/L2 infrastructure at RootStock \u2014 RSKj VM internals, trie structures, precompiled contracts, two-way peg bridge, gas-cost inflation vectors, and federated HSM-based signing infrastructure.",
+    tags: ["RSKj VM", "Trie Structures", "Two-Way Peg", "Federated HSM", "Gas Inflation"],
+  },
+  {
+    label: "// cryptographic primitives",
+    title: "Noise Protocol, Key Exchange & Ratcheting",
+    description:
+      "Secure code audits for Codex, Waku, Nomos, and Status Wallet in Rust, Nim, and JS \u2014 including cryptographic primitive review of Noise handshake protocols, ephemeral key exchange, and ratcheting behaviors.",
+    tags: ["Noise Protocol", "Ephemeral Keys", "Ratcheting", "Rust", "Nim"],
+  },
+  {
+    label: "// consensus & fork handling",
+    title: "Consensus Fault Detection on TON, Solana & Sui",
+    description:
+      "Security audits of TON, Solana, and Sui core implementations \u2014 focusing on consensus fault detection, fork handling edge cases, and state transition serialization bugs at the protocol layer.",
+    tags: ["Consensus Faults", "Fork Handling", "State Serialization", "SVM", "TVM"],
+  },
+  {
+    label: "// custom tooling",
+    title: "Custom Slither Detectors & Formal Verification",
+    description:
+      "We build the tooling, not just use it. Custom Slither detectors written for client-specific vulnerability classes, alongside Echidna, Medusa, Halmos, and Certora across EVM, Rust, and Cairo codebases.",
+    tags: ["Custom Slither", "Echidna", "Medusa", "Halmos", "Certora"],
+  },
+];
+
+function TechnicalDepth() {
+  return (
+    <section className="py-16 border-t border-zinc-800">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="font-mono text-xs tracking-widest text-zinc-500 uppercase mb-3">
+          {"// where we\u2019ve been"}
+        </p>
+        <h2 className="text-2xl font-semibold tracking-tight mb-3">
+          Infrastructure-depth security research.
+        </h2>
+        <p className="text-zinc-400 text-sm max-w-2xl mb-10">
+          Most auditors review application contracts. We have reviewed
+          the VMs, bridges, consensus engines, and cryptographic
+          primitives they run on.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {techDepthCards.map((card) => (
+            <div
+              key={card.title}
+              className="bg-zinc-950 border border-zinc-800 rounded-xl p-5 hover:border-zinc-600 transition-colors"
+            >
+              <div className="font-mono text-[10px] text-emerald-400 tracking-widest uppercase mb-3">
+                {card.label}
+              </div>
+              <h3 className="font-semibold text-sm mb-2">{card.title}</h3>
+              <p className="text-zinc-500 text-xs leading-relaxed mb-3">
+                {card.description}
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {card.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="font-mono text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/25 text-emerald-500/70 bg-emerald-500/5"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -194,6 +285,7 @@ export default function HomePage() {
       <HeroSection />
       <StatsBar />
       <ChainBar />
+      <TechnicalDepth />
       <ServicesSnapshot />
       <Web2Section />
       <AISecurityTeaser />
