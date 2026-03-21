@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://viper-offsec.com/sitemap.xml",
+    sitemap: "https://www.viper-offsec.com/sitemap.xml",
   };
 }

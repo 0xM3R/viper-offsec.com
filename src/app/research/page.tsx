@@ -93,7 +93,7 @@ export default function ResearchPage() {
         )}
       </Section>
 
-      <Section className="border-t border-viper-dark-border">
+      <Section id="talks" className="border-t border-viper-dark-border scroll-mt-24">
         <SectionHeading title="Talks & Presentations" align="left" />
         <div className="space-y-4">
           {talks.map((talk, i) => (
