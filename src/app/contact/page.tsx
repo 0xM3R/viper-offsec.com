@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import Link from "next/link";
 import { Send, Mail, MapPin, Clock, ShieldCheck } from "lucide-react";
 import { Section } from "@/components/section";
 import { FadeIn } from "@/components/fade-in";
@@ -245,6 +246,17 @@ export default function ContactPage() {
                     </>
                   )}
                 </button>
+                <p className="text-zinc-600 text-xs font-mono mt-3 leading-relaxed">
+                  By submitting this form you agree to our{" "}
+                  <Link
+                    href="/privacy"
+                    className="text-zinc-500 hover:text-zinc-300 underline underline-offset-2 transition-colors"
+                  >
+                    privacy policy
+                  </Link>
+                  . We operate under UK GDPR and EU GDPR. Your data is not
+                  shared with third parties.
+                </p>
               </form>
             )}
           </FadeIn>

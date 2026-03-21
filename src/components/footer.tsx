@@ -27,8 +27,8 @@ const footerColumns = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "#", label: "Privacy Policy" },
-      { href: "#", label: "Terms" },
+      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Service" },
     ],
   },
 ];
@@ -98,7 +98,7 @@ export function Footer() {
           <p className="text-xs text-viper-gray">
             &copy; {new Date().getFullYear()} Viper Offensive Security Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-viper-gray">Registered in the UK &amp; Netherlands</p>
+          <p className="text-xs text-viper-gray">Registered in England &amp; Wales &middot; Operating in the Netherlands &amp; Estonia</p>
         </div>
       </div>
     </footer>

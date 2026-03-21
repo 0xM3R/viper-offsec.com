@@ -89,6 +89,13 @@ export default function RootLayout({
                     "Hands-on offensive security engineering firm specialising in Web3 security, smart contract audits, penetration testing, red team operations, and AI security.",
                   foundingLocation: "Netherlands",
                   sameAs: ["https://github.com/viper-offsec"],
+                  privacyPolicy: "https://www.viper-offsec.com/privacy",
+                  termsOfService: "https://www.viper-offsec.com/terms",
+                  location: [
+                    { "@type": "Place", address: { "@type": "PostalAddress", addressCountry: "GB" } },
+                    { "@type": "Place", address: { "@type": "PostalAddress", addressCountry: "NL" } },
+                    { "@type": "Place", address: { "@type": "PostalAddress", addressCountry: "EE" } },
+                  ],
                   knowsAbout: [
                     "Offensive Security",
                     "Penetration Testing",
