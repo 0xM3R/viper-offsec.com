@@ -24,19 +24,19 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Pages
 
-| Route | Description |
-|---|---|
-| `/` | Home — hero, services snapshot, stats, why Viper, featured research, CTA |
-| `/services` | Detailed service descriptions with sticky sidebar navigation |
-| `/about` | Bio, career timeline, philosophy |
-| `/research` | Research posts with category filtering + talks & presentations |
-| `/research/[slug]` | Individual research post pages |
-| `/contact` | Contact form with validation + Resend email integration |
+| Route              | Description                                                              |
+| ------------------ | ------------------------------------------------------------------------ |
+| `/`                | Home — hero, services snapshot, stats, why Viper, featured research, CTA |
+| `/services`        | Detailed service descriptions with sticky sidebar navigation             |
+| `/about`           | Bio, career timeline, philosophy                                         |
+| `/research`        | Research posts with category filtering + talks & presentations           |
+| `/research/[slug]` | Individual research post pages                                           |
+| `/contact`         | Contact form with validation + Resend email integration                  |
 
 ## Environment Variables
 
-| Variable | Description |
-|---|---|
+| Variable         | Description                                                           |
+| ---------------- | --------------------------------------------------------------------- |
 | `RESEND_API_KEY` | API key from [resend.com](https://resend.com) for contact form emails |
 
 ## Deployment
